@@ -4,6 +4,9 @@ import com.AbstractEx;
 
 import java.util.Scanner;
 
+/**
+ * 从字符串中提取整数，并求和
+ */
 public class Ex03 implements AbstractEx {
   public Ex03(){
 
@@ -18,7 +21,9 @@ public class Ex03 implements AbstractEx {
   @Override
   public void input() {
     System.out.print("请输入一个字符串：");
-    this.source = new Scanner(System.in).next();
+    Scanner scanner = new Scanner(System.in);
+    this.source = scanner.next();
+    scanner.close();
   }
 
   @Override

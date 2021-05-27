@@ -4,6 +4,10 @@ import com.AbstractEx;
 
 import java.util.Scanner;
 
+/**
+ * 将多个相同的连续字符合并为1个字符
+ * aaabbbccc -> abc
+ */
 public class Ex02 implements AbstractEx {
   public Ex02(String source) {
     this.source = source;
@@ -20,6 +24,7 @@ public class Ex02 implements AbstractEx {
     Scanner scanner = new Scanner(System.in);
     System.out.print("请输入字符串");
     this.source = scanner.next();
+    scanner.close();
   }
 
   @Override

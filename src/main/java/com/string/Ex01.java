@@ -4,6 +4,9 @@ import com.AbstractEx;
 
 import java.util.Scanner;
 
+/**
+ * 将k进制的数字字符串转换为m进制
+ */
 public class Ex01 implements AbstractEx {
   public Ex01(int k, int m, String num) {
     this.k = k;
