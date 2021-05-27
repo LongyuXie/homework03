@@ -31,9 +31,9 @@ public class Ex04 implements AbstractEx{
   public void input() {
     Scanner scanner = new Scanner(System.in);
     System.out.print("请输入一个字符串：");
-    this.source = scanner.next();
+    this.source = scanner.nextLine();
     System.out.print("请输入作为字串的字符串：");
-    this.subStr = scanner.next();
+    this.subStr = scanner.nextLine();
     scanner.close();
   }
 
@@ -45,6 +45,10 @@ public class Ex04 implements AbstractEx{
   @Override
   public void solve() {
     this.target = this.source.replaceAll(this.subStr, "[$0]");
+  }
+
+  public static void main(String[] args) {
+    new Ex04().run();
   }
 
 }
