@@ -29,7 +29,7 @@ public class Ex01 implements AbstractEx {
     System.out.print("请输入原进制：");
     k = scanner.nextInt();
     System.out.print("该进制的数字串：");
-    num = scanner.next();
+    num = scanner.nextLine();
     System.out.print("请输入目标进制：");
     m = scanner.nextInt();
     scanner.close();

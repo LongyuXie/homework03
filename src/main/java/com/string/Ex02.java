@@ -23,7 +23,7 @@ public class Ex02 implements AbstractEx {
   public void input() {
     Scanner scanner = new Scanner(System.in);
     System.out.print("请输入字符串");
-    this.source = scanner.next();
+    this.source = scanner.nextLine();
     scanner.close();
   }
 
