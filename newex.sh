@@ -9,8 +9,8 @@ if [ -n "$1" ]; then
     fullName=${match//\./\/}
     baseName=`basename ${fullName}`
     dirName=`dirname ${fullName}`
-    echo $baseName
-    echo $dirName
+    # echo $baseName
+    # echo $dirName
     prefix="./src"
     ## TODO: 如果已经存在目标文件，需要进行其他的操作
 
