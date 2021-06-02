@@ -34,8 +34,8 @@ public class Ex02 implements AbstractEx {
 
   @Override
   public void solve() {
-//    this.target = source.replaceAll();
-    this.target = Ex02.compress(this.source);
+    this.target = source.replaceAll("(.)\\1*", "$1");
+//    this.target = Ex02.compress(this.source);
   }
 
   /**
