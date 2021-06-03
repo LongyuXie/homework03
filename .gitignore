@@ -7,6 +7,7 @@
 .idea/
 
 *.class
+.~*.doc
 
 # Log file
 *.log
