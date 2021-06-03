@@ -1,6 +1,7 @@
 package com.oop;
 
 import com.exception.ComplexNumberException;
+import com.oop.complex.ComplexNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

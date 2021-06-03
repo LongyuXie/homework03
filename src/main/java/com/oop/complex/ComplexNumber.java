@@ -1,8 +1,7 @@
-package com.oop;
+package com.oop.complex;
 
 import com.exception.ComplexNumberException;
 
-import javax.swing.text.StyledEditorKit;
 import java.util.regex.Pattern;
 
 /**
