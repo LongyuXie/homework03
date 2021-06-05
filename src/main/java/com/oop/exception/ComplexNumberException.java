@@ -1,4 +1,4 @@
-package com.exception;
+package com.oop.exception;
 
 public class ComplexNumberException extends RuntimeException {
   public ComplexNumberException(){

@@ -1,7 +1,7 @@
 package com.oop;
 
-import com.exception.ComplexNumberException;
 import com.oop.complex.ComplexNumber;
+import com.oop.exception.ComplexNumberException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -43,9 +43,7 @@ class ComplexNumberTest {
     var a = new ComplexNumber(1, .9);
     var b = new ComplexNumber(3.5, 2.1);
     assertEquals("4.5+3.0i", a.add(b).toString());
-    assertThrows(ComplexNumberException.class, () -> {
-      a.add(null);
-    });
+    assertThrows(ComplexNumberException.class, () -> a.add(null));
   }
 
   @Test
@@ -56,9 +54,7 @@ class ComplexNumberTest {
     // 但是浮点数存储为-2.5-1.2000000000000002i
     // 浮点数的判断是不准确的
     assertEquals("-2.5", a.sub(b).toString());
-    assertThrows(ComplexNumberException.class, () -> {
-      a.sub(null);
-    });
+    assertThrows(ComplexNumberException.class, () -> a.sub(null));
   }
 
   @Test
@@ -66,9 +62,7 @@ class ComplexNumberTest {
     var a = new ComplexNumber(1, 1);
     var b = new ComplexNumber(2, 20);
     assertEquals("-18.0+22.0i", a.mul(b).toString());
-    assertThrows(ComplexNumberException.class, () -> {
-      a.mul(null);
-    });
+    assertThrows(ComplexNumberException.class, () -> a.mul(null));
   }
 
   @Test
@@ -77,12 +71,8 @@ class ComplexNumberTest {
     var b = new ComplexNumber(2, 2);
     var c = new ComplexNumber(0, 0);
     assertEquals("0.5", a.div(b).toString());
-    assertThrows(ComplexNumberException.class, () -> {
-      a.div(null);
-    });
-    assertThrows(ComplexNumberException.class, () -> {
-      b.div(c);
-    });
+    assertThrows(ComplexNumberException.class, () -> a.div(null));
+    assertThrows(ComplexNumberException.class, () -> b.div(c));
   }
 
   @Test

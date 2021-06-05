@@ -1,6 +1,6 @@
 package com.oop.complex;
 
-import com.exception.ComplexNumberException;
+import com.oop.exception.ComplexNumberException;
 
 import java.util.regex.Pattern;
 
@@ -29,7 +29,6 @@ public class ComplexNumber {
   /**
    * 从字符串中解析复数
    * 什么样的字符串是合格的字符串
-   * @param s
    */
   public static ComplexNumber parseComplexNumber(String s){
     if(s == null || s.length() == 0){
