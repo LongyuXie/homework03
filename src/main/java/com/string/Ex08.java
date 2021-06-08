@@ -51,14 +51,18 @@ public class Ex08 implements AbstractEx {
 
   @Override
   public void solve() {
-    Pattern p = Pattern.compile("([a-zA-Z0-9_\\u4e00-\\u9fa5]+) *: *([a-zA-Z0-9_\u4e00-\u9fa5]+)");
+    Pattern p = Pattern.compile("([a-zA-Z0-9_\\u4e00-\\u9fa5]+)\\s*:\\s*([a-zA-Z0-9_\u4e00-\u9fa5]+)");
     Matcher matcher = p.matcher(this.dataString);
     this.result = this.templateString;
     while(matcher.find()){
       // System.out.println("var: " + matcher.group(1));
       // System.out.println("value: " + matcher.group(2));
-      this.result = this.result.replaceAll("\\$\\{" + matcher.group(1) + "\\}", matcher.group(2));
+      this.result = this.result.replaceAll("\\$\\{" + matcher.group(1) + "}", matcher.group(2));
     }
+  }
+
+  public void replaceTemp(String s){
+
   }
 
   public static void main(String[] args) {
