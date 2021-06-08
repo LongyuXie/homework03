@@ -41,8 +41,6 @@ public class Ex02 implements AbstractEx {
   /**
    * 将多个连续相同的字符压缩为1个字符
    * eg: aaabbbbccc -> abc
-   * @param source
-   * @return
    */
   public static String compress(String source){
     if(source == null || source.isEmpty()){

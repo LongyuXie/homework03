@@ -20,7 +20,7 @@ public class Ex06 implements AbstractEx {
 
   private String source = "";
   public double weight = .0;
-  private Map<Character, Double> weightMap = new HashMap<Character, Double>(){{
+  private final Map<Character, Double> weightMap = new HashMap<>() {{
     put('C', 12.01);
     put('H', 1.008);
     put('O', 16.00);
@@ -43,6 +43,11 @@ public class Ex06 implements AbstractEx {
     scanner.close();
   }
 
+  private boolean check(String source){
+    String reg = "^\\s*([CHON]\\d*)+\\s*$";
+    return this.source.matches(reg);
+  }
+
   @Override
   public void output() {
     System.out.printf("分子式：%s的分子量为%fg/mol\n", this.source, this.weight);
@@ -51,6 +56,11 @@ public class Ex06 implements AbstractEx {
   @Override
   public void solve() {
     // 每一个字母后接若干个数字
+    if(!check(this.source)){
+      System.out.printf("%s不是一个有效的分子式！\n", this.source);
+      return;
+    }
+
     Pattern p = Pattern.compile("[CHON]\\d*");
     Matcher matcher = p.matcher(this.source.toUpperCase());
     while(matcher.find()){
@@ -71,7 +81,7 @@ public class Ex06 implements AbstractEx {
 
     int len = this.source.length();
 
-    StringBuffer buffer = new StringBuffer();
+    StringBuilder buffer = new StringBuilder();
 
     for(int i = 0; i < len; ){
       if(c != 0 && num != 0){
